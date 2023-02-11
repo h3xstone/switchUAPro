@@ -17,6 +17,35 @@ fetch("listAgent.json")
 .then(response=> response.json())
 .then(json_data => {UA_list = json_data});
 
+browser.runtime.onMessage.addListener((msg, sender, sendResp) => {
+	if (msg.cmdCS === 'setOS'){
+		setOS(msg.opt);
+	} else if (msg.cmdCS === 'setBRO'){
+		setBrowser(msg.opt);
+	} else if (msg.cmdCS === 'setSELUA'){
+		setSELUA(msg.opt);
+	} else if (msg.cmdCS === 'setUA'){
+		setUA(msg.opt);
+	} else if (msg.cmdCS === 'setRndUA'){
+		setRandomUA(msg.opt[0],msg.opt[1],msg.opt[2],msg.opt[3]);
+	} else if (msg.cmdCS === 'reset'){
+		resetALL();
+	} else if (msg.cmdCS === 'setPow'){
+		setPower(msg.opt);
+	} else if (msg.cmdCS === 'getPow'){
+		getPower();
+	} else if (msg.cmdCS === 'getUA'){
+		getUA();
+	} else if (msg.cmdCS === 'clearQ'){
+		clearQuery();
+	} else if (msg.cmdCS === 'getRndUA'){
+		getRandomUA();
+	}
+	else {
+		return;
+	}
+});
+
 function rewriteUAHeader(e) {
 	for (let hdr of e.requestHeaders) {
 		if (hdr.name.toLowerCase() === "user-agent") {
@@ -124,14 +153,14 @@ function setPower(v){
 
 		browser.browserAction.setBadgeText({text: 'ON'});
 		browser.browserAction.setBadgeBackgroundColor({color: '#008000'});
-		
+
 		if(rnd_flag && rnd_t==="minutes"){
 			setTimer(rnd_nr);
 		}
 	}else{
 		status = "off";
 		browser.webRequest.onBeforeSendHeaders.removeListener(rewriteUAHeader, {urls: ["<all_urls>"]}, ["blocking", "requestHeaders"]);
-		
+
 		browser.browserAction.setBadgeText({text: 'OFF'});
 		browser.browserAction.setBadgeBackgroundColor({color: '#FF6550'});
 		

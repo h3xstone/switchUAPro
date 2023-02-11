@@ -1,29 +1,27 @@
-var bgPage = browser.extension.getBackgroundPage();
-
 document.addEventListener("click", (e) => {
 	if (e.target.classList.contains("radioOS")) {
-		bgPage.setOS(e.target.value);
+		browser.runtime.sendMessage({cmdCS: "setOS", opt: e.target.value});
 	} else if (e.target.classList.contains("radioBRO")) {
-		bgPage.setBrowser(e.target.value);
+		browser.runtime.sendMessage({cmdCS: "setBRO", opt: e.target.value});
 	} else if (e.target.classList.contains("optua")) {
-		bgPage.setSELUA(e.target.textContent);
+		browser.runtime.sendMessage({cmdCS: "setSELUA", opt: e.target.textContent});
 	} else if (e.target.classList.contains("sub")) {
 		const form = document.querySelector("form");
 		
 		if (e.target.id === 'apply') {
-			bgPage.setUA(form[0].value);
+			browser.runtime.sendMessage({cmdCS: "setUA", opt: form[0].value});
 
 			let os = document.querySelector("input[type='radio'][class='radioOS']:checked");
 			if(os) {
 				os = os.value;
 			}
-			bgPage.setRandomUA(form[3].checked, form[4].value, form[5].value, os);
+			browser.runtime.sendMessage({cmdCS: "setRndUA", opt: [form[3].checked, form[4].value, form[5].value, os]});
 		} else if (e.target.id === 'reset') {
-			bgPage.resetALL();
+			browser.runtime.sendMessage({cmdCS: "reset"});
 		}
 	} else if (e.target.id === 'togglePower') {
-		bgPage.setPower(e.target.checked);
-		bgPage.getPower();
+		browser.runtime.sendMessage({cmdCS: "setPow", opt: e.target.checked});
+		browser.runtime.sendMessage({cmdCS: "getPow"});
 	} else if (e.target.id === 'toggleRnd') {
 		checkErr();
 	} else {
@@ -66,10 +64,10 @@ browser.runtime.onMessage.addListener((msg) => {
 });
 
 document.addEventListener("readystatechange", (e) => {
-	bgPage.getUA();
-	bgPage.clearQuery();
-	bgPage.getPower();
-	bgPage.getRandomUA();
+	browser.runtime.sendMessage({cmdCS: "getUA"});
+	browser.runtime.sendMessage({cmdCS: "clearQ"});
+	browser.runtime.sendMessage({cmdCS: "getPow"});
+	browser.runtime.sendMessage({cmdCS: "getRndUA"});
 });
 
 document.getElementById("rndNum").addEventListener("change", checkErr);
