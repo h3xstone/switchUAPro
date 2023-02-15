@@ -1,21 +1,22 @@
 body {
 	background-color: #F3F3F3;
 	width: 500px;
+	overflow-x: hidden;
 }
 
 #power {
 	border: 2px groove #AABBCC;
 	border-radius: 7px;
 	top: 10px;
+	left: 440px;
 	width: 62px;
 	padding: 2px;
 	padding-right: 0px;
 	margin-bottom: 3px;
-	margin-right: 0px;
 	margin-top: 5px;
 	display: inline-flex;
   cursor: pointer;
-  float: right;
+  position: absolute;
 }
 
 #power:hover {
@@ -88,6 +89,10 @@ td ~td {
 	font-size: 11px;
 }
 
+#currUA {
+	width: 490px;
+}
+
 button.sub {
 	width: 70px;
 	height: 30px;
@@ -100,7 +105,9 @@ button.sub {
 #rndNum {
 	text-align: center;
 	border-radius: 5px;
+	width: 70px;
 }
+
 #lblRnd {
 	display: inline-block;
 	vertical-align: sub;
