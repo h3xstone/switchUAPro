@@ -13,7 +13,7 @@ Useful for users who want more privacy while browsing.
   - **_Extra_:**  _random User-Agent iteration by specific OS or by ALL_
 
 ## Installation
-- Install it from ~~Chrome Web Store~~  (pending)
+- Install it from [Chrome Web Store](https://chrome.google.com/webstore/detail/switch-ua-pro/enjdilojimfgbmcgaanicllleffkijnm)
 
 ## Privacy Policy
 This extension does **NOT** collect any data.
