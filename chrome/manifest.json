@@ -1,8 +1,8 @@
 {
 	"manifest_version": 3,
-	"name": "User-Agent Switcher PRO",
+	"name": "Switch UA PRO",
 	"version": "1.0.1",
-	"description": "Anonymize your browsing by easily switch/spoof/fake User-Agent with what you want. User-Agent selection mode: Manual, Auto, Random",
+	"description": "Take control of your browsing by easily changing your User-Agent with what you want. Selection mode available: Manual, Auto, Random",
 	"author": "Matt Glow",
 	"homepage_url": "https://github.com/h3xstone/switchUAPro",
 
