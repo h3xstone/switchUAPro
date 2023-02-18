@@ -13,8 +13,9 @@ Useful for users who want more privacy while browsing.
   - **_Extra_:**  _random User-Agent iteration by specific OS or by ALL_
 
 ## Installation
-- Install it from ~~Chrome Web Store~~  (pending)
+- Install it from [Chrome Web Store](https://chrome.google.com/webstore/detail/switch-ua-pro/enjdilojimfgbmcgaanicllleffkijnm)
 - Install it from [Firefox Add-ons](https://addons.mozilla.org/it/firefox/addon/user-agent-switcher-pro)
 
 ## Privacy Policy
-This extension does **NOT** collect any data.
+This extension does **NOT** collect any data.  
+However you don't need to trust me, you can read the code!
