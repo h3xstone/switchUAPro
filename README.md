@@ -1,5 +1,5 @@
 # switchUAPro
-Web Browser Extension for Chrome and Firefox that allows user to easily spoof the User Agent.  
+Web Browser Extension for Firefox that allows user to easily spoof the User Agent.  
 Useful for the developer to test the site view by quickly switching between desktop and mobile versions.  
 Useful for users who want more privacy while browsing.  
 ***Unlike other similar extensions this one also intercepts iframes and client-side javascript.***
