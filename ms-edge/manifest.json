@@ -1,0 +1,54 @@
+{
+	"manifest_version": 3,
+	"name": "User-Agent Switcher PRO",
+	"version": "1.0.1",
+	"description": "Anonymize your browsing by easily switch/spoof/fake User-Agent with what you want. User-Agent selection mode: Manual, Auto, Random",
+	"author": "Matt Glow",
+	"homepage_url": "https://github.com/h3xstone/switchUAPro",
+
+	"icons": {
+		"32": "icons/logo32.png",
+		"48": "icons/logo48.png",
+		"96": "icons/logo96.png",
+		"128": "icons/logo128.png"
+	},
+
+	"background": {
+		"service_worker": "background.js"
+	},
+
+	"action": {
+		"default_popup": "popup/index.html",
+		"default_title": "UA Switcher Pro",
+		"default_icon": {
+			"32": "icons/logo32.png",
+			"48": "icons/logo48.png",
+			"96": "icons/logo96.png",
+			"128": "icons/logo128.png"
+		}
+	},
+
+	"permissions": [
+		"declarativeNetRequest",
+		"scripting",
+		"storage",
+		"alarms",
+		"webRequest"
+	],
+
+	"host_permissions": ["<all_urls>"],
+
+	"web_accessible_resources": [{
+		"resources": ["inject.js","storage.js","storage2.js"],
+		"matches": ["<all_urls>"]
+	}],
+
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["storage.js"],
+			"run_at": "document_start",
+			"all_frames": true
+		}
+	]
+}
