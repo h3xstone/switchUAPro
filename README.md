@@ -15,6 +15,7 @@ Useful for users who want more privacy while browsing.
 ## Installation
 - Install it from [Chrome Web Store](https://chrome.google.com/webstore/detail/switch-ua-pro/enjdilojimfgbmcgaanicllleffkijnm)
 - Install it from [Firefox Add-ons](https://addons.mozilla.org/it/firefox/addon/user-agent-switcher-pro)
+- Install it from [Microsoft Edge Web Store](https://microsoftedge.microsoft.com/addons/detail/useragent-switcher-pro/gddaibkpgboenamnfpllpidojcnoblng)
 
 ## Privacy Policy
 This extension does **NOT** collect any data.  
