@@ -13,7 +13,7 @@ Useful for users who want more privacy while browsing.
   - **_Extra_:**  _random User-Agent iteration by specific OS or by ALL_
 
 ## Installation
-- Install it from ~~[Microsoft Edge Web Store]()~~ (pending)
+- Install it from [Microsoft Edge Web Store](https://microsoftedge.microsoft.com/addons/detail/useragent-switcher-pro/gddaibkpgboenamnfpllpidojcnoblng)
 
 ## Privacy Policy
 This extension does **NOT** collect any data.
